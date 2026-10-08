@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumSystems | Güvenlik & Teknoloji Çözümleri</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #38bdf8;
+            --primary-hover: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ffffff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            background-color: var(--primary-hover);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            color: #000;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
+        /* SERVICES SECTION */
+        .section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: var(--text-main);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* CONTACT FORM */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: #fff;
+            outline: none;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVİGASYON -->
+    <header>
+        <div class="logo">QuantumSystems</div>
+        <nav>
+            <a href="#home">Ana Sayfa</a>
+            <a href="#services">Hizmetler</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <!-- HERO BÖLÜMÜ -->
+    <section class="hero" id="home">
+        <h1>Geleceğin Akıllı Güvenlik Teknolojileri</h1>
+        <p>QuantumSystems ile işletmeniz ve yaşam alanlarınız için üst düzey güvenlik kamera sistemleri, geçiş kontrol ve akıllı otomasyon çözümleri sunuyoruz.</p>
+        <a href="#contact" class="btn">Teklif Alın</a>
+    </section>
+
+    <!-- HİZMETLER -->
+    <section class="section" id="services">
+        <h2 class="section-title">Hizmetlerimiz</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Kamera & İzleme Sistemleri</h3>
+                <p>Yüksek çözünürlüklü IP kameralar ve yapay zeka destekli gece görüşlü çevre güvenlik çözümleri.</p>
+            </div>
+            <div class="card">
+                <h3>Geçiş Kontrol Sistemleri</h3>
+                <p>Kartlı, biyometrik ve yüz tanıma teknolojili profesyonel personel geçiş ve takip sistemleri.</p>
+            </div>
+            <div class="card">
+                <h3>Akıllı Alarm & Algılama</h3>
+                <p>Hırsızlık, yangın ve gaz sızıntısı durumlarına karşı anlık mobil bildirimli akıllı alarm altyapısı.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM FORM BÖLÜMÜ -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Bizimle İletişime Geçin</h2>
+        <form class="contact-form" id="quantumForm">
+            <div class="form-group">
+                <label for="name">Adınız Soyadınız</label>
+                <input type="text" id="name" required placeholder="Örn: Ahmet Yılmaz">
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta Adresiniz</label>
+                <input type="email" id="email" required placeholder="ornek@domain.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Mesajınız</label>
+                <textarea id="message" rows="4" required placeholder="Projeniz veya ihtiyacınız hakkında kısa detay verin..."></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Gönder</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 QuantumSystems. Tüm hakları saklıdır.
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.getElementById('quantumForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert('Teşekkürler ' + name + '! Mesajınız başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
